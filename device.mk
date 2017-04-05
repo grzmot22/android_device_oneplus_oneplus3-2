@@ -186,9 +186,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
-# DU Updater
+# OTA Updates
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.du.updater=oneplus3
+    ro.ota.romname=AOSP-OnePlus3-7.1 \
+    ro.ota.version=$(shell date -u +%Y%m%d) \
+    ro.ota.manifest=https://romhut.com/roms/aosp-oneplus3-7-1/ota.xml
 
 # GPS
 PRODUCT_PACKAGES += \
