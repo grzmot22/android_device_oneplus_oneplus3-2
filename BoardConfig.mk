@@ -161,6 +161,9 @@ endif
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
+# Healthd
+BOARD_PERIODIC_CHORES_INTERVAL_FAST := "60 * 10"
+
 # Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_oneplus3
