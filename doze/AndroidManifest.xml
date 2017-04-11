@@ -23,25 +23,18 @@
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-<<<<<<< HEAD
-=======
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
->>>>>>> 858715b... op3: Doze: Refactor
 
     <uses-sdk
-        android:minSdkVersion="21"
-        android:targetSdkVersion="21"/>
+        android:minSdkVersion="24"
+        android:targetSdkVersion="24"/>
 
     <application
-        android:label="OneplusDoze"
+        android:label="@string/device_settings_app_name"
         android:persistent="true">
 
-<<<<<<< HEAD
-        <receiver android:name="com.cyanogenmod.settings.doze.BootCompletedReceiver">
-=======
         <receiver android:name=".BootCompletedReceiver">
->>>>>>> 858715b... op3: Doze: Refactor
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -55,23 +48,11 @@
         <activity
             android:name=".DozeSettingsActivity"
             android:label="@string/ambient_display_title"
-<<<<<<< HEAD
-            android:theme="@android:style/Theme.Material.Settings">
-=======
             android:theme="@style/Theme.Main">
->>>>>>> 858715b... op3: Doze: Refactor
             <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <action android:name="org.cyanogenmod.settings.device.DOZE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-<<<<<<< HEAD
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.device" />
-            <meta-data
-                android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_settings_doze" />
-=======
->>>>>>> 858715b... op3: Doze: Refactor
         </activity>
 
     </application>
